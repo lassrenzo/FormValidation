@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration System with Validation and Restriction</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+  <div class="header">
+    <h2>Register</h2>
+  </div>
+  
+  <form>
+    <div class="input-group">
+    <label>First Name</label>
+      <input type="text" name="fname" onkeypress="return/[ a-z ]/i.test(event.key)" required autofocus>
+    </div>
+
+    <div class="input-group">
+    <label>Middle Name</label>
+      <input type="text" name="mname" onkeypress="return /[ a-z ]/i.test(event.key)" >
+    </div>
+
+    <div class="input-group">
+      <label>Last Name</label>
+      <input type="text" name="lname" onkeypress="return /[ a-z ]/i.test(event.key)" >
+    </div>
+
+    <div class="input-group">
+      <label>Username</label>
+      <input type="text" name="username" id="username" onkeypress="return /[a-z,0-9]/i.test(event.key)" required>
+    </div>
+
+    <div class="input-group">
+      <label>Email</label>
+      <input type="email" name="email" onkeypress="return /[a-z,0-9,_.-@]/i.test(event.key)" required>
+    </div>
+
+    <div class="input-group">
+      <label>Phone Number</label>
+      <input type="text" name="pnumber" onkeypress="return /[0-9]/i.test(event.key)" minlength="11" required>
+    </div>
+
+    <div class="input-group">
+      <label>Password</label>
+      <input type="password" minlenght="8" name="password_1" onkeypress="return /[a-z,0-9]/i.test(event.key)" required>
+    </div>
+
+    <div class="input-group">
+      <label>Confirm password</label>
+      <input type="password" minlenght="8" name="password_2" onkeypress="return /[a-z,0-9]/i.test(event.key)" required>
+    </div>
+
+    <div class="input-group">
+      
+      <button type="submit" class="btn" name="reg_user">Register</button>
+    </div>
+
+    <p class="sign">
+      Already an account? 
+      <a href="">Sign in</a>
+    </p>
+
+  </form>
+</body>
+</html>
